@@ -1,0 +1,191 @@
+/* *tipografia general */
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* *tipografía titulo */
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* *estilos generales */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Amaranth", sans-serif;;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth; /*desliza con los clicks dle menu*/
+}
+/* *barra de navegación */
+.contenedor-header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    padding: 2px; /*espacio navbar vertical*/
+    background-color: rgb(0, 0, 0, 0.1); /*transparente*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    /*los 3 anteriores para centrar navbar*/    
+}
+.contenedor-header header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.contenedor-header header ul{
+    display: flex; /*poner en fila*/
+    list-style: none; /*elimina viñetas*/
+}
+.contenedor-header header ul li a{
+    text-align: none;
+    color: #055183; 
+    margin: 0 15px;
+    padding: 3px; /*espacio entre el navbar*/
+    transition: .5s;
+    text-decoration: none; /*quita el subrayado*/
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 15px;
+}
+@media only screen and (min-width: 480px) {
+    /* Estilos CSS para movil */
+.contenedor-header header ul li a{
+    font-size: 18px; /*Barra de navegacion movil*/
+}
+}
+@media only screen and (min-width: 768px) {
+    /* Estilos CSS para tablet */
+.contenedor-header header ul li a{
+    font-size: 35px;
+}
+}
+.contenedor-header header ul li a:hover{
+    color: #57216A; 
+    background-color: #D5AAE4; /*resaltar al poner el cursor*/
+}
+.contenedor-header header ul li a.active{
+    color: #57216A; 
+    background-color: #D5AAE4; /*mantenga resaltado inicio*/
+}
+/* *Sección inicio */
+.inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inicio .contenido-principal{
+    width: 100%;
+    height: auto;
+}
+.inicio .contenido-principal img{
+    margin-top: 0;
+    width: 100%;
+    height: 210%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat; 
+    position: absolute; /* Posiciona la imagen de fondo de forma absoluta dentro del contenedor */
+    z-index: -1; /* Coloca la imagen detrás del texto */
+}
+.inicio .contenido-principal h1{
+    margin-top: 10%;
+    font-family: "Aladin", system-ui;
+    font-size: 118px; 
+    color: #0B0240; 
+    font-weight: bold;
+    text-align: center;
+}
+@media only screen and (min-width: 480px) {
+    /* Estilos CSS para movil */
+    .inicio .contenido-principal h1{
+        font-size: 90px; 
+    }
+}
+@media only screen and (min-width: 768px) {
+    /* Estilos CSS para tablet */
+    .inicio .contenido-principal h1{
+        font-size: 100px; 
+    }
+}
+.inicio .contenido-principal h3{
+    font-size: 40px;  
+    color: #055183;
+    font-weight: bold;
+    margin-top: 3%;
+    text-align: center;
+}
+.inicio .contenido-principal h4{
+    font-size: 40px;  
+    color: #055183;
+    margin-top: 3%;
+    font-weight: normal;
+    text-align: center;
+}
+/* *redes*/
+.inicio .contenido-principal .redes{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.inicio .contenido-principal .redes .contenido-red{
+    display: inline-block; /* Organiza los elementos en línea */
+    margin-right: 90px; /* Agrega margen entre las imágenes */
+    padding: 50px;
+    justify-content: center;  
+}
+@media only screen and (min-width: 480px) {
+    /* Estilos CSS para movil*/
+    .inicio .contenido-principal .redes .contenido-red{
+        margin-right: 20px; /* Agrega margen entre las imágenes */
+    }
+}
+.inicio .contenido-principal .redes .contenido-red .imagen{
+    width: 50px; 
+    height: auto; 
+}
+
+.texto {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente para el texto */
+    color: white;
+    display: none; /* Oculta el texto por defecto */
+    font-family: "Amaranth", sans-serif;
+    font-size: 20px;
+}
+
+.contenido-red:hover .imagen {
+    transform: scale(1.2); /* Aumenta el tamaño de la imagen al hacer hover */
+}
+
+.contenido-red:hover .texto {
+    display: block; /* Muestra el texto al hacer hover */
+}
+
+/* * footer*/
+footer {
+    text-align: center; /* Centra el texto en el pie de página */
+}
+@media only screen and (min-width: 1024px) {
+    /* Estilos CSS para ipad */
+footer{
+    margin-top: 5%;
+}
+}
+@media only screen and (min-width: 768px) {
+    /* Estilos CSS para ipad */
+footer{
+    margin-top: 10%;
+}
+}
+footer p {
+    margin: 0; /* Elimina el margen predeterminado del párrafo */
+    font-size: 20px; /* Tamaño de fuente */
+    color: #0B0240; /* Color de texto */
+}
+

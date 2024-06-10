@@ -1,0 +1,286 @@
+/* *tipografia general */
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* *tipografía titulo */
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* *estilos generales */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Amaranth", sans-serif;;
+    box-sizing: border-box;
+}
+/* *Portafolio titulo*/
+.titulopor h2{
+    text-align: center;
+    font-family: "Aladin", system-ui;
+    color: #0B0240;
+    font-size: 50px;
+    margin-top: 100px;
+}
+
+.contenedor-padre{
+    display: flex; /* Utiliza flexbox para alinear los contenedores hijos */
+    gap: 60px; /* Espacio entre los contenedores hijos */
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+@media only screen and (min-width: 480px) {
+    /* Estilos CSS para movil */
+    .contenedor-padre{
+        gap: 20px; /* Espacio entre los contenedores hijos */
+}
+}
+@media only screen and (min-width: 1024px) {
+    /* Estilos CSS para desktop */
+    .contenedor-padre{
+        gap: 60px; /* Espacio entre los contenedores hijos */
+}
+}
+.contenedor-hijo{
+    width: 450px;
+    height: 300px;
+    position: relative;
+    margin-top: 2%;
+    text-align: center;
+}
+@media only screen and (min-width: 480px) {
+    /* Estilos CSS para movil */
+    .contenedor-hijo{
+        width: 200px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    /* Estilos CSS para ipad */
+    .contenedor-hijo{
+        width: 330px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    /* Estilos CSS para ipad */
+    .contenedor-hijo{
+        width: 450px;
+    }
+}
+
+.frontal, .posterior {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Oculta el contenido trasero durante la rotación */
+    border-radius: 30px; /* Bordes redondeados */
+    display: flex;
+    flex-direction: column; /* Permite apilar elementos verticalmente */
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.6s; /* Añade una transición suave */
+}
+
+.frontal{
+    background-color: #e7cdf0;
+    box-shadow: 4px 4px 4px #a547c6; /* Sombra para dar profundidad */
+    text-align: center; /* Centra el texto */
+    padding: 20px;
+}
+.frontal h2{
+    line-height: 2;
+    font-family: "Aladin", system-ui;
+    color: #0B0240;
+    font-size: 33px;
+    text-align: center;
+}
+@media only screen and (min-width: 480px) {
+    /* Estilos CSS para movil */
+    .frontal h2{
+        font-size: 21px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    /* Estilos CSS para ipad */
+    .frontal h2{
+        font-size: 23px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    /* Estilos CSS para ipad */
+    .frontal h2{
+        font-size: 33px;
+    }
+}
+.frontal p{
+    font-size: 19px;
+    color: #055183;
+}
+@media only screen and (min-width: 480px) {
+    /* Estilos CSS para ipad */
+    .frontal p{
+        font-size: 14px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    /* Estilos CSS para tablet */
+    .frontal p{
+        font-size: 19px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    /* Estilos CSS para desktop */
+    .frontal p{
+        font-size: 19px;
+    }
+}
+
+.posterior {
+    transform: rotateY(180deg); /* Inicialmente oculta la imagen */
+    background-color: #ce9ce0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.posterior img {
+    width: 70%;
+    height: 60%;
+    object-fit: 100% 100%; /* Ajusta la imagen al tamaño del contenedor */
+    border-radius: 40px; /* Bordes redondeados */
+}
+@media only screen and (min-width: 480px) {
+    /* Estilos CSS para ipad */
+    .posterior img {
+        width: 60%;
+        height: 20%;
+    }
+}
+@media only screen and (min-width: 768px) {
+    /* Estilos CSS para ipad */
+    .posterior img {
+        width: 70%;
+        height: 50%;
+    }
+}
+
+.contenedor-hijo:hover .frontal {
+    transform: rotateY(180deg); /* Rota el contenido para ocultarlo */
+}
+
+.contenedor-hijo:hover .posterior {
+    transform: rotateY(0deg); /* Rota la imagen para mostrarla */
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 70%;
+    margin-left: 23%;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 20px;
+    background-color: #0B0240;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+@media only screen and (min-width: 480px) {
+    /* Estilos CSS para ipad */
+    .boton {
+        margin-top: 160%;
+        font-size: 12px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    /* Estilos CSS para ipad */
+    .boton {
+        margin-top: 100%;
+        margin-left: 6%;
+        font-size: 20px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    /* Estilos CSS para desktop */
+    .boton {
+        margin-top: 70%;
+
+    }
+}
+.boton:hover {
+    background-color: #055183;
+}
+
+
+/* * redes*/
+.redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 8%;
+}
+.redes .contenido-red{
+    display: inline-block; /* Organiza los elementos en línea */
+    margin-right: 90px; /* Agrega margen entre las imágenes */
+    padding: 50px;
+    justify-content: center;  
+}
+@media only screen and (min-width: 480px) {
+    /* Estilos CSS para tablet */
+    .redes .contenido-red{
+        margin-right: 3px; /* Agrega margen entre las imágenes */     
+    }
+}
+@media only screen and (min-width: 768px) {
+    /* Estilos CSS para tablet */
+    .redes .contenido-red{
+        margin-right: 40px; /* Agrega margen entre las imágenes */     
+    }
+}
+.redes .contenido-red .imagen{
+    width: 50px; 
+    height: auto; 
+}
+@media only screen and (min-width: 480px) {
+    /* Estilos CSS para movil */
+    .redes .contenido-red .imagen{
+        width: 30px; 
+    }
+}
+@media only screen and (min-width: 768px) {
+    /* Estilos CSS para desktop */
+    .redes .contenido-red .imagen{
+        width: 50px; 
+    }
+}
+.redes .contenido-red .texto{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente para el texto */
+    color: white;
+    display: none; /* Oculta el texto por defecto */
+    font-family: "Amaranth", sans-serif;
+    font-size: 20px;
+}
+
+.redes .contenido-red:hover .imagen {
+    transform: scale(1.2); /* Aumenta el tamaño de la imagen al hacer hover */
+}
+
+.redes .contenido-red:hover .texto {
+    display: block; /* Muestra el texto al hacer hover */
+}
+/* *footer*/
+footer {
+    padding: 40px;
+    text-align: center; /* Centra el texto en el pie de página */
+}
+@media only screen and (min-width: 768px) {
+    /* Estilos CSS para ipad */
+footer{
+    margin-top: 3%;
+}
+}
+footer p {
+    margin: 0; /* Elimina el margen predeterminado del párrafo */
+    font-size: 20px; /* Tamaño de fuente */
+    color: #0B0240; /* Color de texto */
+}
